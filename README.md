@@ -1,2 +1,2 @@
 # airbnbCloneCoding
-Airbnb clone coading using Python &amp; Django &amp; some tools
+Airbnb clone coding using Python &amp; Django &amp; some tools
