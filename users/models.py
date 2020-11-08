@@ -22,20 +22,18 @@ class User(AbstractUser):
         KRW = "KRW", _("KRW")
         JPY = "JPY", _("JPY")
 
-    avata = models.ImageField(null=True, blank=True)
-    gender = models.CharField(max_length=1, choices=Gender.choices, null=True)
+    avata = models.ImageField(blank=True)
+    gender = models.CharField(max_length=1, choices=Gender.choices)
     bio = models.TextField(default="")
-    birthday = models.DateField(null=True)
+    birthday = models.DateField()
     language = models.CharField(
         max_length=2,
         choices=Language.choices,
-        null=False,
         default=Language.LANGUAGE_ENGLISH,
     )
     currency = models.CharField(
         max_length=3,
         choices=Currency.choices,
-        null=False,
         default=Currency.USD,
     )
     superhost = models.BooleanField(default=False, blank=False)
