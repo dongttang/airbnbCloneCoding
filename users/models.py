@@ -24,7 +24,7 @@ class User(AbstractUser):
 
     avata = models.ImageField(blank=True)
     gender = models.CharField(max_length=1, choices=Gender.choices, blank=True)
-    bio = models.TextField(default="", blank=True)
+    bio = models.TextField(blank=True)
     birthday = models.DateField(blank=True, null=True)
     language = models.CharField(max_length=2, choices=Language.choices, blank=True)
     currency = models.CharField(max_length=3, choices=Currency.choices, blank=True)
