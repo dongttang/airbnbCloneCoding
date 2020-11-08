@@ -23,17 +23,9 @@ class User(AbstractUser):
         JPY = "JPY", _("JPY")
 
     avata = models.ImageField(blank=True)
-    gender = models.CharField(max_length=1, choices=Gender.choices)
-    bio = models.TextField(default="")
-    birthday = models.DateField()
-    language = models.CharField(
-        max_length=2,
-        choices=Language.choices,
-        default=Language.LANGUAGE_ENGLISH,
-    )
-    currency = models.CharField(
-        max_length=3,
-        choices=Currency.choices,
-        default=Currency.USD,
-    )
-    superhost = models.BooleanField(default=False, blank=False)
+    gender = models.CharField(max_length=1, choices=Gender.choices, blank=True)
+    bio = models.TextField(default="", blank=True)
+    birthday = models.DateField(blank=True, null=True)
+    language = models.CharField(max_length=2, choices=Language.choices, blank=True)
+    currency = models.CharField(max_length=3, choices=Currency.choices, blank=True)
+    superhost = models.BooleanField(default=False)
