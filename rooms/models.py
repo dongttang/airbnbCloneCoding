@@ -8,7 +8,7 @@ from users import models as user_models
 
 class Room(core_models.AbstractTimeStampModel):
 
-    host = models.ForeignKey(user_models.User)
+    host = models.ForeignKey(user_models.User, on_delete=models.CASCADE)
     room_title = models.CharField(max_length=140)
     description = models.TextField()
     country = CountryField()
