@@ -7,5 +7,5 @@ class AbstractTimeStampModel(models.Model):
     class Meta:
         abstract = True
 
-    created_time = models.DateTimeField()
-    updated_time = models.DateTimeField()
+    created_time = models.DateTimeField(auto_now_add=True)
+    updated_time = models.DateTimeField(auto_now=True)
