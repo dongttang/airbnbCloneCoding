@@ -9,14 +9,14 @@ from users import models as user_models
 class Room(core_models.AbstractTimeStampModel):
 
     host = models.ForeignKey(user_models.User, on_delete=models.CASCADE)
-    room_title = models.CharField(max_length=140)
+    room_title = models.CharField(max_length=80)
     description = models.TextField()
     country = CountryField()
     city = models.CharField(max_length=80)
     price = models.IntegerField()
-    address = models.CharField()
-    latitude = models.DecimalField()
-    longitude = models.DecimalField()
+    address = models.CharField(max_length=80)
+    latitude = models.DecimalField(decimal_places=6, max_digits=6)
+    longitude = models.DecimalField(decimal_places=6, max_digits=6)
     guests = models.IntegerField()
     beds = models.IntegerField()
     bedrooms = models.IntegerField()
@@ -24,3 +24,6 @@ class Room(core_models.AbstractTimeStampModel):
     check_in = models.TimeField()
     check_out = models.TimeField()
     instant_book = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.room_title
