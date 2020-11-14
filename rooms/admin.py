@@ -17,3 +17,8 @@ class ItemAdmin(admin.ModelAdmin):
 @admin.register(rooms_models.Room)
 class RoomAdmin(admin.ModelAdmin):
     pass
+
+
+@admin.register(rooms_models.Photo)
+class PhotoAdmin(admin.ModelAdmin):
+    pass
