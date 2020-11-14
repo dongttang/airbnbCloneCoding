@@ -28,6 +28,12 @@ class Amenity(AbstractItem):
         verbose_name_plural = "Amenities"
 
 
+class Facility(AbstractItem):
+    class Meta:
+        verbose_name = "Facility"
+        verbose_name_plural = "Facilities"
+
+
 class Room(core_models.AbstractTimeStampModel):
 
     host = models.ForeignKey(user_models.User, on_delete=models.CASCADE)
