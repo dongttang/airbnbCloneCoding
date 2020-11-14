@@ -20,6 +20,7 @@ class AbstractItem(core_models.AbstractTimeStampModel):
 class RoomType(AbstractItem):
     class Meta:
         verbose_name = "Room Type"
+        ordering = ["name"]
 
 
 class Amenity(AbstractItem):
