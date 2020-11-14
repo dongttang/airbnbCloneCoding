@@ -1,8 +1,6 @@
 from django.contrib import admin
 from . import models as rooms_models
 
-# Register your models here.
-
 
 @admin.register(
     rooms_models.RoomType,
