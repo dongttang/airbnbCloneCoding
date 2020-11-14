@@ -10,5 +10,5 @@ class List(core_models.AbstractTimeStampModel):
     )
     rooms = models.ManyToManyField("rooms.Room", blank=True)
 
-    def __str__(self)
+    def __str__(self):
         return self.list_name
