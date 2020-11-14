@@ -7,7 +7,7 @@ class Conversation(core_models.AbstractTimeStampModel):
     participants = models.ManyToManyField("users.User", blank=True)
 
     def __str__(self):
-        return self.created_time
+        return str(self.created_time)
 
 
 class Message(core_models.AbstractTimeStampModel):
@@ -19,4 +19,4 @@ class Message(core_models.AbstractTimeStampModel):
     )
 
     def __str__(self):
-        return f"{self.user} says: {self.text}"
+        return f"{self.user} says: {self.message}"
