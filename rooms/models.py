@@ -17,6 +17,11 @@ class AbstractItem(core_models.AbstractTimeStampModel):
         return self.name
 
 
+class RoomType(AbstractItem):
+    class Meta:
+        verbose_name = "Room Type"
+
+
 class Room(core_models.AbstractTimeStampModel):
 
     host = models.ForeignKey(user_models.User, on_delete=models.CASCADE)
