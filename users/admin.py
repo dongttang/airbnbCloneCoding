@@ -8,6 +8,8 @@ from . import models
 @admin.register(models.User)
 class CustomUserAdmin(UserAdmin):
 
+    """ Custom User Admin Definition """
+
     fieldsets = UserAdmin.fieldsets + (
         (
             (
