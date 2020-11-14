@@ -1,14 +1,19 @@
 from django.contrib import admin
-from . import models
+from . import models as rooms_models
 
 # Register your models here.
 
 
-@admin.register(models.RoomType, models.Amenity, models.Facility, models.HouseRule)
+@admin.register(
+    rooms_models.RoomType,
+    rooms_models.Amenity,
+    rooms_models.Facility,
+    rooms_models.HouseRule,
+)
 class ItemAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(models.Room)
+@admin.register(rooms_models.Room)
 class RoomAdmin(admin.ModelAdmin):
     pass
