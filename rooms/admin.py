@@ -21,7 +21,7 @@ class ItemAdmin(admin.ModelAdmin):
 class RoomAdmin(admin.ModelAdmin):
 
     """ Room Admin Definition """
-    
+
     pass
 
 
