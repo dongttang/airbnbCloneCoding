@@ -6,6 +6,17 @@ from users import models as user_models
 # Create your models here.
 
 
+class AbstractItem(core_models.AbstractTimeStampModel):
+
+    name = models.CharField(max_length=80)
+
+    class Meta:
+        abstract = True
+
+    def __str__(self):
+        return self.name
+
+
 class Room(core_models.AbstractTimeStampModel):
 
     host = models.ForeignKey(user_models.User, on_delete=models.CASCADE)
